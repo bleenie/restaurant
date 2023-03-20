@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    background-image: url('../images/bg.png');
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background-attachment: fixed;
+    font-family: 'K2D', sans-serif;
+}
+
+header {
+    width: 100vw;
+    height: 80px;
+    background-color: #0A1417;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.header-left {
+    width: 50%;
+    height: 100%;
+}
+
+.header-right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    gap: 30px;
+    color: white;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 80px;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.cart-btn {
+    width: 170px;
+    height: 40px;
+    color: white;
+    background-color: #10B8C1;
+    font-size: 18px;
+    font-family: 'K2D', sans-serif;
+    font-weight: 500;
+    box-shadow: 0px -4px 15px #057686 inset;
+    border: none;
+}
+
+.banner {
+    width: 100vw;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about {
+    width: 60%;
+    height: 350px;
+    background-color: #020506;
+    margin-top: 50px;
+    display: flex;
+}
+
+.about-text {
+    height: 100%;
+    width: 60%;
+    box-sizing: border-box;
+    padding: 50px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    color:white;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.about-img {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    overflow: hidden;
+}
+
+.about-img img {
+    max-height: 100%;
+    max-width: auto;
+} 
+
+h1 {
+    color: white;
+    margin: 60px;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+h2 {
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.menu {
+    display: grid;
+    gap: 50px;
+    grid-template-areas:
+    "search title title"
+    "search products products"
+    "search products products"
+    "none products products"
+}
+
+.menu-search {
+    grid-area: search;
+    height: 600px;
+    width: 300px;
+    background-color: #020506;
+}
+
+.menu-title {
+    grid-area: title;
+    height: 30px;
+    width: 600px;
+    color: white;
+}
+
+.menu-item-box {
+    grid-area: products;
+    height: 800px;
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.menu-item {
+    height: 25%;
+    width: 40%;
+    background-color: #020506;
+}
