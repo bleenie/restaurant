@@ -1,27 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
     <script src="https://kit.fontawesome.com/21918895c4.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=K2D:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <div class="header-left"></div>
         <div class="header-right">
-            <a href=""><i class="fa-regular fa-user fa-xs"></i> LOGIN</a>
-            <a href="">CONTACT</a>
+            <?php
+            session_start();
+            if (isset($_SESSION['user']['name'])) :
+            ?>
+                <div class="dropdown">
+                    <a href="index.php"><i class="fa-regular fa-user fa-xs" class="dropdown-link"></i> WELKOM <?php echo strtoupper($_SESSION['user']['name']) ?> </a>
+                    <div class="dropdown-content">
+                        <a href="./admin-page.php">MENU AANPASSEN</a>
+                        <a href="./include/logout.php">LOG UIT</a>
+                    </div>
+                </div>
+            <?php else : ?>
+                <a href="login-page.php"><i class="fa-regular fa-user fa-xs"></i> LOGIN</a>
+            <?php endif; ?>
             <a href="">MENU</a>
-            <button class="cart-btn"><i class="fa-solid fa-cart-shopping fa-sm"></i> CART</button>
+            <a href="">CONTACT</a>
+            <button class="cart-btn"><i class="fa-solid fa-cart-shopping fa-sm"></i> MANDJE</button>
         </div>
     </header>
+
     <img class="banner" src="./images/banner.png" alt="banner">
+
     <main>
         <div class="about">
             <div class="about-text">
@@ -33,19 +51,40 @@
             </div>
         </div>
         <h1>ONS MENU</h1>
-        <div class="menu">
-            <div class="menu-search"></div>
-            <div class="menu-title">
-                <h2>POPULAIRE GERECHTEN</h2>
+        <div id="menu">
+            <div class="menu-top">
+                <div class="menu-top-title">
+                    <h2>POPULAIRE GERECHTEN</h2>
+                </div>
+                <div class="menu-top-search"></div>
             </div>
             <div class="menu-item-box">
-                <div class ="menu-item"></div>
-                <div class ="menu-item"></div>
-                <div class ="menu-item"></div>
-                <div class ="menu-item"></div>
-                <div class ="menu-item"></div>
+                <?php
+                include_once './include/connect.php';
+
+                $stmt = $conn->prepare("SELECT * FROM gerechten;");
+                $stmt->execute();
+                $data = $stmt->fetchAll();
+
+                //var_dump($data);
+                //echo $data['NAME'];
+
+                foreach ($data as $key => $value) : ?>
+                    <div class="menu-item">
+                        <div class="menu-item-left">
+                            <p class="dish-title"> <?php echo $value['NAME']; ?> </p>
+                            <p class="test"> <?php echo $value['DESCRIPTION']; ?> </p>
+                        </div>
+                        <div class="menu-item-right">
+                            <img src="<?php echo $value['IMAGE']; ?>" alt="gerecht">
+                        </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
+        <h1>CONTACT</h1>
+        <div id="contact">
     </main>
 </body>
+
 </html>
