@@ -19,7 +19,6 @@ if (isset($_SESSION['user']['name'])) :
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=K2D:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <title>Document</title>
-        <script src="./admin.js" defer></script>
     </head>
 
     <body>
@@ -62,7 +61,7 @@ if (isset($_SESSION['user']['name'])) :
                         <label>Foto</label>
                         <input type="file" name="img" placeholder="Nieuwe foto">
 
-                        <input type="submit" name="submit">
+                        <input class="submitbtn" type="submit" name="submit">
                     </form>
                 </div>
             </div>

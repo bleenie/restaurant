@@ -39,8 +39,8 @@
                 <label>Password</label>
                 <input type="password" name="password" placeholder="Enter password">
 
-                <input type="submit" name="submit">
-                <a href="./register-page.php">Register<a>
+                <input class="submitbtn" type="submit" value="Login" name="submit">
+                <a class="link" href="./register-page.php">Register</a>
             </form>
         </div>
     </main>

@@ -19,7 +19,6 @@ if (isset($_SESSION['user']['name'])) :
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=K2D:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <title>Document</title>
-        <script src="./admin.js" defer></script>
     </head>
 
     <body>
@@ -65,9 +64,9 @@ if (isset($_SESSION['user']['name'])) :
                             <tr>
                                 <td><?php echo $value['name']; ?></td>
                                 <td><?php echo $value['description']; ?></td>
-                                <td><?php echo $value['price']; ?></td>
+                                <td>€<?php echo $value['price']; ?></td>
                                 <td><?php echo $value['image']; ?></td>
-                                <td><a href="./include/delete.php?id=<?php echo $value['id']; ?>" name="delsubmit">DELETE</a>
+                                <td><a class="link" href="./include/delete.php?id=<?php echo $value['id']; ?>" name="delsubmit">DELETE</a>
                             </tr>
                         <?php endforeach; ?>
                     </table>

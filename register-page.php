@@ -39,7 +39,7 @@
                 <label>First Name</label>
                 <input type="text" name="name" placeholder="Enter your name" required>
 
-                <input type="submit" name="submit">
+                <input class="submitbtn" type="submit" value="Register" name="submit">
             </form>
         </div>
     </main>
