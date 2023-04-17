@@ -32,8 +32,7 @@
             <?php else : ?>
                 <a href="login-page.php"><i class="fa-regular fa-user fa-xs"></i> LOGIN</a>
             <?php endif; ?>
-            <a href="">MENU</a>
-            <a href="">CONTACT</a>
+            <a href="index.php#menu">MENU</a>
             <button class="cart-btn"><i class="fa-solid fa-cart-shopping fa-sm"></i> MANDJE</button>
         </div>
     </header>
@@ -71,6 +70,7 @@
                         <div class="menu-item-left">
                             <p class="dish-title"> <?php echo $value['name']; ?> </p>
                             <p class="dish-description"> <?php echo $value['description']; ?> </p>
+                            <p class="dish-price">€<?php echo $value['price']; ?> </p>
                         </div>
                         <div class="menu-item-right">
                             <img src="<?php echo $value['image']; ?>" alt="gerecht">
@@ -79,8 +79,6 @@
                 <?php endforeach; ?>
             </div>
         </div>
-        <h1>CONTACT</h1>
-        <div id="contact">
     </main>
 </body>
 

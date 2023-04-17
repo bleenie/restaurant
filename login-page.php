@@ -20,8 +20,7 @@
         <div class="header-left"></div>
         <div class="header-right">
             <a href="login-page.php"><i class="fa-regular fa-user fa-xs"></i> LOGIN</a>
-            <a href="">MENU</a>
-            <a href="">CONTACT</a>
+            <a href="index.php#menu">MENU</a>
             <button class="cart-btn"><i class="fa-solid fa-cart-shopping fa-sm"></i> MANDJE</button>
         </div>
     </header>

@@ -33,8 +33,7 @@ if (isset($_SESSION['user']['name'])) :
                         <a href="./include/logout.php">LOG UIT</a>
                     </div>
                 </div>
-                <a href="">MENU</a>
-                <a href="">CONTACT</a>
+                <a href="index.php#menu">MENU</a>
                 <button class="cart-btn"><i class="fa-solid fa-cart-shopping fa-sm"></i> MANDJE</button>
             </div>
         </header>

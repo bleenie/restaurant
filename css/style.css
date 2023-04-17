@@ -90,7 +90,7 @@ main {
 }
 
 p {
-    color:white;
+    color: white;
     font-size: 18px;
     font-weight: 300;
     text-align: justify;
@@ -108,7 +108,7 @@ p {
 .about-img img {
     max-height: 100%;
     max-width: auto;
-} 
+}
 
 h1 {
     color: white;
@@ -154,7 +154,7 @@ h2 {
 }
 
 .menu-item {
-    height: 150px;
+    min-height: 150px;
     width: 480px;
     background-color: #020506;
     padding: 15px;
@@ -164,6 +164,9 @@ h2 {
 .menu-item-left {
     width: 60%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .menu-item-right {
@@ -181,4 +184,15 @@ h2 {
 
 .dish-title {
     font-weight: 700;
+}
+
+.dish-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #10B8C1;
+    box-shadow: 0px -4px 15px #057686 inset;
+    width: 70px;
+    height: 36px;
+    margin: 30px 0 0 0;
 }
