@@ -16,7 +16,9 @@
 
 <body>
     <header>
-        <div class="header-left"></div>
+        <div class="header-left">
+            <a href="index.php"><img class="logo" src="./images/logo.png" alt="logo"></a>
+        </div>
         <div class="header-right">
             <?php
             session_start();

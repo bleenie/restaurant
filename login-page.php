@@ -17,7 +17,9 @@
 
 <body>
     <header>
-        <div class="header-left"></div>
+        <div class="header-left">
+            <a href="index.php"><img class="logo" src="./images/logo.png" alt="logo"></a>
+        </div>
         <div class="header-right">
             <a href="login-page.php"><i class="fa-regular fa-user fa-xs"></i> LOGIN</a>
             <a href="index.php#menu">MENU</a>

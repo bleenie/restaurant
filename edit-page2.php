@@ -25,7 +25,9 @@ if (isset($_SESSION['user']['name'])) :
 
     <body>
         <header>
-            <div class="header-left"></div>
+            <div class="header-left">
+                <a href="index.php"><img class="logo" src="./images/logo.png" alt="logo"></a>
+            </div>
             <div class="header-right">
                 <div class="dropdown">
                     <a href="index.php"><i class="fa-regular fa-user fa-xs" class="dropdown-link"></i> WELKOM <?php echo strtoupper($_SESSION['user']['name']) ?> </a>
