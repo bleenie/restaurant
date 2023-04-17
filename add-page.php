@@ -47,7 +47,7 @@ if (isset($_SESSION['user']['name'])) :
                     <a href="delete-page.php" class="btn">ITEM VERWIJDEREN</a>
                 </div>
                 <div class="admin-box-bottom">
-                    <form action="./include/admin.php" method="post">
+                    <form action="./include/add.php" method="post">
                         <h2>ITEM TOEVOEGEN</h2>
                         <label>Naam gerecht</label>
                         <input type="text" name="name" placeholder="Nieuwe naam" required>

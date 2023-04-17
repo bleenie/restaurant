@@ -66,7 +66,7 @@ if (isset($_SESSION['user']['name'])) :
                                 <td><?php echo $value['description']; ?></td>
                                 <td><?php echo $value['price']; ?></td>
                                 <td><?php echo $value['image']; ?></td>
-                                <td><button type="submit" name="delsubmit">DELETE</button>
+                                <td><a href="./include/delete.php?id=<?php echo $value['id']; ?>" name="delsubmit">DELETE</a>
                             </tr>
                         <?php endforeach; ?>
                     </table>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['user']['name'])) :
-    include_once('./include/admin.php');
+    include_once('./include/edit.php');
 ?>
 
     <!DOCTYPE html>

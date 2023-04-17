@@ -1,19 +1,5 @@
 <?php
-include_once 'database.php';
-
-if (isset($_POST['submit'])) {
-    $name = $_POST['name'];
-    $desc = $_POST['desc'];
-    $price = $_POST['price'];
-    $img = $_POST['img'];
-
-    $dishadd = addItem($name, $desc, $price, $img);
-
-    if ($dishadd == true) {
-        header("location: ../admin-page.php");
-    }
-}
-
+include_once 'connect.php';
 
 $stmt = $conn->prepare("SELECT * FROM gerechten WHERE id = :id");
 $stmt->execute(['id' => $_GET['id']]);
