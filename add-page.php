@@ -13,6 +13,7 @@ if (isset($_SESSION['user']['name'])) :
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/header.css">
         <link rel="stylesheet" href="./css/form.css">
+        <link rel="stylesheet" href="./css/table.css">
         <script src="https://kit.fontawesome.com/21918895c4.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +29,7 @@ if (isset($_SESSION['user']['name'])) :
                 <div class="dropdown">
                     <a href="index.php"><i class="fa-regular fa-user fa-xs" class="dropdown-link"></i> WELKOM <?php echo strtoupper($_SESSION['user']['name']) ?> </a>
                     <div class="dropdown-content">
-                        <a href="./admin-page.php">MENU AANPASSEN</a>
+                        <a href="./add-page.php">MENU AANPASSEN</a>
                         <a href="./include/logout.php">LOG UIT</a>
                     </div>
                 </div>
@@ -41,52 +42,26 @@ if (isset($_SESSION['user']['name'])) :
             <h1>MENU AANPASSEN</h1>
             <div class="admin-box">
                 <div class="admin-box-top">
-                    <button onclick="showAddForm()" class="btn">ITEM TOEVOEGEN</button>
-                    <button onclick="showChangeForm()" class="btn">ITEM AANPASSEN</button>
-                    <button onclick="showDeleteForm()" class="btn">ITEM VERWIJDEREN</button>
+                    <a href="add-page.php" class="btn">ITEM TOEVOEGEN</a>
+                    <a href="edit-page.php" class="btn">ITEM AANPASSEN</a>
+                    <a href="delete-page.php" class="btn">ITEM VERWIJDEREN</a>
                 </div>
                 <div class="admin-box-bottom">
-                    <form id="addform" action="./include/admin.php" method="post">
+                    <form action="./include/admin.php" method="post">
                         <h2>ITEM TOEVOEGEN</h2>
                         <label>Naam gerecht</label>
-                        <input type="text" name="dishname" placeholder="Nieuwe naam" required>
+                        <input type="text" name="name" placeholder="Nieuwe naam" required>
 
                         <label>Beschrijving</label>
-                        <input type="text" name="dishdesc" placeholder="Nieuwe beschrijving" required>
+                        <input type="text" name="desc" placeholder="Nieuwe beschrijving" required>
 
                         <label>Prijs</label>
-                        <input type="text" name="dishprice" placeholder="Nieuwe prijs" required>
+                        <input type="text" name="price" placeholder="Nieuwe prijs" required>
 
                         <label>Foto</label>
-                        <input type="image" name="dishimg" placeholder="Nieuwe foto" required>
+                        <input type="file" name="img" placeholder="Nieuwe foto">
 
                         <input type="submit" name="submit">
-                    </form>
-                    <form id="changeform" action="./include/admin.php" method="post">
-                        <h2>ITEM AANPASSEN</h2>
-                        <label>New username</label>
-                        <input type="text" name="regusername" placeholder="Enter username" required>
-
-                        <label>New password</label>
-                        <input type="password" name="regpassword" placeholder="Enter password" required>
-
-                        <label>First Name</label>
-                        <input type="text" name="regname" placeholder="Enter your name" required>
-
-                        <input type="submit" name="regsubmit">
-                    </form>
-                    <form id="deleteform" action="./include/admin.php" method="post">
-                        <h2>ITEM VERWIJDEREN</h2>
-                        <label>New username</label>
-                        <input type="text" name="regusername" placeholder="Enter username" required>
-
-                        <label>New password</label>
-                        <input type="password" name="regpassword" placeholder="Enter password" required>
-
-                        <label>First Name</label>
-                        <input type="text" name="regname" placeholder="Enter your name" required>
-
-                        <input type="submit" name="regsubmit">
                     </form>
                 </div>
             </div>

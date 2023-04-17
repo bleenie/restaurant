@@ -6,7 +6,7 @@
 }
 
 .admin-box {
-    height: 500px;
+    min-height: 500px;
     width: 800px;
     background-color: #020506;
 }
@@ -15,7 +15,7 @@ label {
     color: white;
 }
 
-input {
+input:not(.radio-input) {
     display: block;
 }
 
@@ -43,14 +43,25 @@ input {
     color: white;
     border: none;
     height: 40px;
-    width: 160px;
+    width: 180px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn:hover {
     background-color: #020506;
 }
 
-#changeform,
-#deleteform {
-    display: none;
+.form-flex {
+    display: flex;
+    gap: 100px;
+}
+
+
+.form-left,
+.form-right {
+    justify-content: center;
+    align-items: center;
 }

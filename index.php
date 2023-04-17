@@ -25,7 +25,7 @@
                 <div class="dropdown">
                     <a href="index.php"><i class="fa-regular fa-user fa-xs" class="dropdown-link"></i> WELKOM <?php echo strtoupper($_SESSION['user']['name']) ?> </a>
                     <div class="dropdown-content">
-                        <a href="./admin-page.php">MENU AANPASSEN</a>
+                        <a href="./add-page.php">MENU AANPASSEN</a>
                         <a href="./include/logout.php">LOG UIT</a>
                     </div>
                 </div>
@@ -66,17 +66,14 @@
                 $stmt->execute();
                 $data = $stmt->fetchAll();
 
-                //var_dump($data);
-                //echo $data['NAME'];
-
                 foreach ($data as $key => $value) : ?>
                     <div class="menu-item">
                         <div class="menu-item-left">
-                            <p class="dish-title"> <?php echo $value['NAME']; ?> </p>
-                            <p class="test"> <?php echo $value['DESCRIPTION']; ?> </p>
+                            <p class="dish-title"> <?php echo $value['name']; ?> </p>
+                            <p class="dish-description"> <?php echo $value['description']; ?> </p>
                         </div>
                         <div class="menu-item-right">
-                            <img src="<?php echo $value['IMAGE']; ?>" alt="gerecht">
+                            <img src="<?php echo $value['image']; ?>" alt="gerecht">
                         </div>
                     </div>
                 <?php endforeach; ?>

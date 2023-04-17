@@ -1,0 +1,13 @@
+table {
+    color: white;
+}
+
+th,
+td {
+    padding: 8px;
+}
+
+td button {
+    width: 80px;
+    height: 20px;
+}
