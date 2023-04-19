@@ -52,7 +52,7 @@ if (isset($_SESSION['user']['name'])) :
                         <label>Naam gerecht</label>
                         <input type="text" name="name" placeholder="Nieuwe naam" required>
 
-                        <label>Beschrijving</label>
+                        <label>Beschrijving </label>
                         <input type="text" name="desc" placeholder="Nieuwe beschrijving" required>
 
                         <label>Prijs </label>
