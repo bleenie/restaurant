@@ -58,7 +58,7 @@ if (isset($_SESSION['user']['name'])) :
                         <label>Prijs</label>
                         <input type="text" name="price" placeholder="Nieuwe prijs" required>
 
-                        <label>Foto</label>
+                        <label>Foto </label>
                         <input type="file" name="img" placeholder="Nieuwe foto">
 
                         <input class="submitbtn" type="submit" name="submit">
