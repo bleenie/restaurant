@@ -55,7 +55,7 @@ if (isset($_SESSION['user']['name'])) :
                         <label>Beschrijving</label>
                         <input type="text" name="desc" placeholder="Nieuwe beschrijving" required>
 
-                        <label>Prijs</label>
+                        <label>Prijs </label>
                         <input type="text" name="price" placeholder="Nieuwe prijs" required>
 
                         <label>Foto </label>
