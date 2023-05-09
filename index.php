@@ -53,8 +53,8 @@
                 <img src="./images/about.jpg" alt="about">
             </div>
         </div>
-        <h1>ONS MENU</h1>
         <div id="menu">
+            <h1>ONS MENU</h1>
             <div class="menu-top">
                 <div class="menu-top-title">
                     <h2>POPULAIRE GERECHTEN</h2>
@@ -83,6 +83,8 @@
                 <?php endforeach; ?>
             </div>
         </div>
+        <div id="galerij">
+            <h1>GALERIJ</h1>
     </main>
 </body>
 
